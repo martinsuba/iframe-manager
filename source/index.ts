@@ -11,7 +11,7 @@ export default class IframeInjector {
     return '';
   }
 
-  createElement({ src, id, style }: { src: string, id: string, style: string }): HTMLElement {
+  createElement({ src, id, style }: { src: string, id: string, style: object }): HTMLElement {
     const iframe = document.createElement('iframe');
     iframe.setAttribute('src', src);
     iframe.setAttribute('id', id);
@@ -19,7 +19,7 @@ export default class IframeInjector {
     return iframe;
   }
 
-  inject({ src, style }: { src: string, style: string }) {
+  inject({ src, style }: { src: string, style: object }) {
     const id = v4();
     const iframe = this.createElement({ id, src, style });
     document.body.appendChild(iframe);

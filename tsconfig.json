@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "typeRoots": [
-    ]
+    "types": ["mocha", "chai"],
   },
   "include": [
     "source/*"
   ],
   "exclude:": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "coverage"
   ]
 }

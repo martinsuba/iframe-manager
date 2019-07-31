@@ -2,9 +2,7 @@ const path = require('path');
 
 const tsLoader = {
   test: /\.ts|\.tsx$/,
-  loaders: [{
-    loader: 'ts-loader',
-  }],
+  loaders: ['istanbul-instrumenter-loader', 'ts-loader'],
   include: [
     path.resolve(__dirname, '../source'),
   ],

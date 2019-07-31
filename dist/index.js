@@ -363,36 +363,7 @@ module.exports = v4;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var uuid_1 = __webpack_require__(/*! uuid */ "../node_modules/uuid/index.js");
-var IframeInjector = /** @class */ (function () {
-    function IframeInjector() {
-        this.iframes = new Map();
-    }
-    IframeInjector.prototype.parseStyle = function (styleObj) {
-        return '';
-    };
-    IframeInjector.prototype.createElement = function (_a) {
-        var src = _a.src, id = _a.id, style = _a.style;
-        var iframe = document.createElement('iframe');
-        iframe.setAttribute('src', src);
-        iframe.setAttribute('id', id);
-        iframe.setAttribute('style', this.parseStyle(style));
-        return iframe;
-    };
-    IframeInjector.prototype.inject = function (_a) {
-        var src = _a.src, style = _a.style;
-        var id = uuid_1.v4();
-        var iframe = this.createElement({ id: id, src: src, style: style });
-        document.body.appendChild(iframe);
-        this.iframes.set(id, iframe);
-        return id;
-    };
-    return IframeInjector;
-}());
-exports.default = IframeInjector;
-
+var cov_2d8kk051wl=function(){var path="/Users/martinsuba/dev/learn/iframe-manager/source/index.ts",hash="9079387fab651ef1b1986ecee31feadbb1c95baa",Function=function(){}.constructor,global=new Function('return this')(),gcv="__coverage__",coverageData={path:"/Users/martinsuba/dev/learn/iframe-manager/source/index.ts",statementMap:{"0":{start:{line:2,column:0},end:{line:2,column:62}},"1":{start:{line:3,column:13},end:{line:3,column:28}},"2":{start:{line:4,column:36},end:{line:28,column:3}},"3":{start:{line:6,column:8},end:{line:6,column:33}},"4":{start:{line:8,column:4},end:{line:10,column:6}},"5":{start:{line:9,column:8},end:{line:9,column:18}},"6":{start:{line:11,column:4},end:{line:18,column:6}},"7":{start:{line:12,column:18},end:{line:12,column:24}},"8":{start:{line:12,column:31},end:{line:12,column:36}},"9":{start:{line:12,column:46},end:{line:12,column:54}},"10":{start:{line:13,column:21},end:{line:13,column:53}},"11":{start:{line:14,column:8},end:{line:14,column:40}},"12":{start:{line:15,column:8},end:{line:15,column:38}},"13":{start:{line:16,column:8},end:{line:16,column:61}},"14":{start:{line:17,column:8},end:{line:17,column:22}},"15":{start:{line:19,column:4},end:{line:26,column:6}},"16":{start:{line:20,column:18},end:{line:20,column:24}},"17":{start:{line:20,column:34},end:{line:20,column:42}},"18":{start:{line:21,column:17},end:{line:21,column:28}},"19":{start:{line:22,column:21},end:{line:22,column:75}},"20":{start:{line:23,column:8},end:{line:23,column:42}},"21":{start:{line:24,column:8},end:{line:24,column:37}},"22":{start:{line:25,column:8},end:{line:25,column:18}},"23":{start:{line:27,column:4},end:{line:27,column:26}},"24":{start:{line:29,column:0},end:{line:29,column:33}}},fnMap:{"0":{name:"(anonymous_0)",decl:{start:{line:4,column:36},end:{line:4,column:37}},loc:{start:{line:4,column:48},end:{line:28,column:1}},line:4},"1":{name:"IframeInjector",decl:{start:{line:5,column:13},end:{line:5,column:27}},loc:{start:{line:5,column:30},end:{line:7,column:5}},line:5},"2":{name:"(anonymous_2)",decl:{start:{line:8,column:42},end:{line:8,column:43}},loc:{start:{line:8,column:62},end:{line:10,column:5}},line:8},"3":{name:"(anonymous_3)",decl:{start:{line:11,column:45},end:{line:11,column:46}},loc:{start:{line:11,column:59},end:{line:18,column:5}},line:11},"4":{name:"(anonymous_4)",decl:{start:{line:19,column:38},end:{line:19,column:39}},loc:{start:{line:19,column:52},end:{line:26,column:5}},line:19}},branchMap:{},s:{"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":0,"11":0,"12":0,"13":0,"14":0,"15":0,"16":0,"17":0,"18":0,"19":0,"20":0,"21":0,"22":0,"23":0,"24":0},f:{"0":0,"1":0,"2":0,"3":0,"4":0},b:{},_coverageSchema:"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c"},coverage=global[gcv]||(global[gcv]={});if(coverage[path]&&coverage[path].hash===hash){return coverage[path];}coverageData.hash=hash;return coverage[path]=coverageData;}();cov_2d8kk051wl.s[0]++;Object.defineProperty(exports,"__esModule",{value:true});var uuid_1=(cov_2d8kk051wl.s[1]++,__webpack_require__(/*! uuid */ "../node_modules/uuid/index.js"));var IframeInjector=(cov_2d8kk051wl.s[2]++,function(){cov_2d8kk051wl.f[0]++;function IframeInjector(){cov_2d8kk051wl.f[1]++;cov_2d8kk051wl.s[3]++;this.iframes=new Map();}cov_2d8kk051wl.s[4]++;IframeInjector.prototype.parseStyle=function(styleObj){cov_2d8kk051wl.f[2]++;cov_2d8kk051wl.s[5]++;return'';};cov_2d8kk051wl.s[6]++;IframeInjector.prototype.createElement=function(_a){cov_2d8kk051wl.f[3]++;var src=(cov_2d8kk051wl.s[7]++,_a.src),id=(cov_2d8kk051wl.s[8]++,_a.id),style=(cov_2d8kk051wl.s[9]++,_a.style);var iframe=(cov_2d8kk051wl.s[10]++,document.createElement('iframe'));cov_2d8kk051wl.s[11]++;iframe.setAttribute('src',src);cov_2d8kk051wl.s[12]++;iframe.setAttribute('id',id);cov_2d8kk051wl.s[13]++;iframe.setAttribute('style',this.parseStyle(style));cov_2d8kk051wl.s[14]++;return iframe;};cov_2d8kk051wl.s[15]++;IframeInjector.prototype.inject=function(_a){cov_2d8kk051wl.f[4]++;var src=(cov_2d8kk051wl.s[16]++,_a.src),style=(cov_2d8kk051wl.s[17]++,_a.style);var id=(cov_2d8kk051wl.s[18]++,uuid_1.v4());var iframe=(cov_2d8kk051wl.s[19]++,this.createElement({id:id,src:src,style:style}));cov_2d8kk051wl.s[20]++;document.body.appendChild(iframe);cov_2d8kk051wl.s[21]++;this.iframes.set(id,iframe);cov_2d8kk051wl.s[22]++;return id;};cov_2d8kk051wl.s[23]++;return IframeInjector;}());cov_2d8kk051wl.s[24]++;exports.default=IframeInjector;
 
 /***/ })
 

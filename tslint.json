@@ -6,7 +6,8 @@
     "no-debugger": true,
     "whitespace": [
       false
-    ]
+    ],
+    "import-name": false
   },
   "rulesDirectory": []
 }
