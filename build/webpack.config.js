@@ -1,22 +1,10 @@
 const path = require('path');
 
-const jsLoader = {
-  test: /\.js$/,
+const tsLoader = {
+  test: /\.ts|\.tsx$/,
   loaders: [{
-    loader: 'babel-loader',
-    options: {
-      plugins: [
-        [
-          '@babel/plugin-transform-runtime',
-          {
-            corejs: 2,
-          },
-        ],
-      ],
-      presets: ['@babel/preset-env'],
-    },
-  },
-  ],
+    loader: 'ts-loader',
+  }],
   include: [
     path.resolve(__dirname, '../source'),
   ],
@@ -28,7 +16,7 @@ const jsLoader = {
 module.exports = {
   mode: 'development',
   entry: {
-    index: '../source/index.js',
+    index: '../source/index.ts',
   },
   context: path.resolve(__dirname, '../source'),
   devtool: false,
@@ -41,12 +29,12 @@ module.exports = {
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.ts', '.js', '.json'],
     modules: ['node_modules'],
   },
   module: {
     rules: [
-      jsLoader,
+      tsLoader,
     ],
   },
   target: 'web',
