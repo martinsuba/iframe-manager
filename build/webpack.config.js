@@ -14,7 +14,7 @@ const tsLoader = {
 module.exports = {
   mode: 'development',
   entry: {
-    index: '../source/index.ts',
+    index: '../source/IframeManager.ts',
   },
   context: path.resolve(__dirname, '../source'),
   devtool: false,
