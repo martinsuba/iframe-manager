@@ -1,5 +1,5 @@
 {
-  "name": "extension-iframe-manager",
+  "name": "iframe-manager",
   "version": "1.0.0",
   "description": "Helper tool for handling iframes within the browser extensions",
   "main": "./dist/index.js",
