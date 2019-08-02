@@ -2,13 +2,22 @@ const path = require('path');
 
 const tsLoader = {
   test: /\.ts|\.tsx$/,
-  loaders: ['istanbul-instrumenter-loader', 'ts-loader'],
+  use: 'ts-loader',
   include: [
     path.resolve(__dirname, '../source'),
   ],
   exclude: [
     path.resolve(__dirname, '../node_modules'),
   ],
+};
+
+const coverageLoader = {
+  test: /\.ts|\.tsx$/,
+  use: 'istanbul-instrumenter-loader',
+  include: [
+    path.resolve(__dirname, '../source'),
+  ],
+  exclude: [/__tests__/]
 };
 
 module.exports = {
@@ -32,6 +41,7 @@ module.exports = {
   },
   module: {
     rules: [
+      coverageLoader,
       tsLoader,
     ],
   },
