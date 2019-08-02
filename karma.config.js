@@ -36,7 +36,7 @@ module.exports = (config) => {
     },
 
     // karma-webpack config options
-    webpack: webpackConfig,
+    webpack: webpackConfig('test'),
 
     // Timeout settings
     browserNoActivityTimeout: 60000,
