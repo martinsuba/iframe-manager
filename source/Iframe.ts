@@ -1,7 +1,7 @@
 import { parseStyle } from './helpers';
 
 export default class Iframe {
-  private element: HTMLElement;
+  element: HTMLElement;
   private deleteFromList: Function;
 
   constructor(element: HTMLElement, deleteFromList: Function) {
@@ -10,7 +10,7 @@ export default class Iframe {
   }
 
   style(style: object): void {
-    if (!style && (typeof style !== 'object' || Array.isArray(style))) {
+    if (!style || typeof style !== 'object' || Array.isArray(style)) {
       throw new Error(`Style is expected to be an object, but got ${typeof style}`);
     }
     if (!document.body.contains(this.element)) {

@@ -6,6 +6,8 @@
       "dom"
     ],
     "types": ["mocha", "chai"],
+    "sourceMap": true,
+    "esModuleInterop": true
   },
   "include": [
     "source/*"

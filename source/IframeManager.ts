@@ -9,7 +9,7 @@ interface Settings {
 }
 
 export default class IframeManager {
-  private iframes: Set<Iframe>;
+  iframes: Set<Iframe>;
 
   constructor() {
     this.iframes = new Set();
@@ -25,11 +25,11 @@ export default class IframeManager {
     return iframe;
   }
 
-  deleteFromList(iframe: Iframe) {
+  deleteFromList(iframe: Iframe): void {
     this.iframes.delete(iframe);
   }
 
-  inject({ source, style, attributes, target }: Settings) {
+  inject({ source, style, attributes, target }: Settings): Iframe {
     if (!source || typeof source !== 'string') {
       throw new Error(`Source property is expected to be a string, but got ${typeof source}`);
     }

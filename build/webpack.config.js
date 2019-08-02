@@ -17,7 +17,7 @@ module.exports = {
     index: '../source/IframeManager.ts',
   },
   context: path.resolve(__dirname, '../source'),
-  devtool: false,
+  devtool: 'inline-source-map',
   node: {
     fs: 'empty',
   },
