@@ -1,5 +1,5 @@
 import Iframe from './Iframe';
-import { parseStyle } from './helpers';
+import { parseStyle, camelToKebab } from './helpers';
 
 interface Settings {
   source: string;
@@ -21,7 +21,7 @@ export default class IframeManager {
     iframe.setAttribute('style', parseStyle(style));
     for (const attr in attributes) {
       if ({}.hasOwnProperty.call(attributes, attr)) {
-        iframe.setAttribute(attr, attributes[attr]);
+        iframe.setAttribute(camelToKebab(attr), attributes[attr]);
       }
     }
     return iframe;
