@@ -28,7 +28,7 @@ module.exports = (target) => {
       index: '../source/IframeManager.ts',
     },
     context: path.resolve(__dirname, '../source'),
-    devtool: argv.mode === 'production' ? 'source-map' : 'inline-source-map',
+    devtool: argv.mode === 'production' ? 'none' : 'inline-source-map',
     node: {
       fs: 'empty',
     },
