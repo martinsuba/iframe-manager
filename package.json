@@ -1,11 +1,12 @@
 {
   "name": "iframe-manager",
   "version": "1.0.0",
-  "description": "Helper tool for handling iframes within the browser extensions",
+  "description": "Helper tool for creating and managing iframes within the DOM.",
   "main": "./dist/index.js",
   "scripts": {
     "test": "karma start karma.config.js",
-    "build": "npm run clean && webpack --config ./build/webpack.config.js",
+    "build": "npm run clean && webpack --config ./build/webpack.config.js --mode=development",
+    "build:production": "npm run clean && webpack --config ./build/webpack.config.js --mode=production",
     "lint": "eslint --ignore-path .eslintignore . --ext .js,.tsx,.ts",
     "clean": "del-cli dist"
   },
@@ -37,7 +38,8 @@
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "webpack": "^4.38.0",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "yargs": "^13.3.0"
   },
   "dependencies": {}
 }

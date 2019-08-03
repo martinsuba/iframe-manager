@@ -1,4 +1,5 @@
 const path = require('path');
+const { argv } = require('yargs');
 
 module.exports = (target) => {
   const tsLoader = {
@@ -22,12 +23,12 @@ module.exports = (target) => {
   };
 
   const config = {
-    mode: 'development',
+    mode: argv.mode || 'development',
     entry: {
       index: '../source/IframeManager.ts',
     },
     context: path.resolve(__dirname, '../source'),
-    devtool: 'inline-source-map',
+    devtool: argv.mode === 'production' ? 'source-map' : 'inline-source-map',
     node: {
       fs: 'empty',
     },
