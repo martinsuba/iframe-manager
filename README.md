@@ -8,7 +8,7 @@ npm install https://github.com/martinsuba/iframe-manager.git
 ```
 
 ## Usage
-```
+```js
 import IframeManager from 'iframe-manager';
 
 const iframeManager = new IframeManager();
@@ -52,7 +52,7 @@ iframeManager.iframes // returns Set object
 ## Methods
 ### IframeManager.inject(settings: Settings): Iframe
 Injects iframe element to the DOM.
-```
+```ts
 interface Settings {
   source: string;
   style?: object;
