@@ -36,7 +36,7 @@ const injectedIframe = iframeManager.inject({
 // update iframe's style
 injectedIframe.style({
   border: '5px solid red',
-  backgroundColor: 'red,
+  backgroundColor: 'red',
 });
 
 // iframe HTMLElement is accessible under `element` property
