@@ -20,7 +20,9 @@ export default class IframeManager {
     iframe.setAttribute('src', source);
     iframe.setAttribute('style', parseStyle(style));
     for (const attr in attributes) {
-      iframe.setAttribute(attr, attributes[attr]);
+      if ({}.hasOwnProperty.call(attributes, attr)) {
+        iframe.setAttribute(attr, attributes[attr]);
+      }
     }
     return iframe;
   }
@@ -29,14 +31,16 @@ export default class IframeManager {
     this.iframes.delete(iframe);
   }
 
-  inject({ source, style, attributes, target }: Settings): Iframe {
+  inject({
+    source, style, attributes, target,
+  }: Settings): Iframe {
     if (!source || typeof source !== 'string') {
       throw new Error(`Source property is expected to be a string, but got ${typeof source}`);
     }
     if (style && (typeof style !== 'object' || Array.isArray(style))) {
       throw new Error(`Style property is expected to be an object, but got ${typeof style}`);
     }
-    if (attributes && typeof attributes !== 'object' || Array.isArray(attributes)) {
+    if (attributes && (typeof attributes !== 'object' || Array.isArray(attributes))) {
       throw new Error(`Attributes property is expected to be an object, but got ${typeof attributes}`);
     }
     if (target && typeof target !== 'string') {

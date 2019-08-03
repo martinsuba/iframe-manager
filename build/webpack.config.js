@@ -18,7 +18,7 @@ module.exports = (target) => {
     include: [
       path.resolve(__dirname, '../source'),
     ],
-    exclude: [/__tests__/]
+    exclude: [/__tests__/],
   };
 
   const config = {
@@ -46,7 +46,7 @@ module.exports = (target) => {
       ],
     },
     target: 'web',
-  }
+  };
 
   if (target === 'test') {
     config.module.rules = [coverageLoader, ...config.module.rules];
