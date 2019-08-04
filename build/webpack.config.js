@@ -2,24 +2,27 @@ const path = require('path');
 const { argv } = require('yargs');
 
 module.exports = (target) => {
-  const tsLoader = {
+  const babelLoader = {
     test: /\.ts|\.tsx$/,
-    use: 'ts-loader',
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: [
+          '@babel/preset-env',
+          '@babel/typescript',
+        ],
+        plugins: [
+          '@babel/proposal-class-properties',
+          '@babel/proposal-object-rest-spread',
+        ],
+      },
+    },
     include: [
       path.resolve(__dirname, '../source'),
     ],
     exclude: [
       path.resolve(__dirname, '../node_modules'),
     ],
-  };
-
-  const coverageLoader = {
-    test: /\.ts|\.tsx$/,
-    use: 'istanbul-instrumenter-loader',
-    include: [
-      path.resolve(__dirname, '../source'),
-    ],
-    exclude: [/__tests__/],
   };
 
   const config = {
@@ -43,14 +46,14 @@ module.exports = (target) => {
     },
     module: {
       rules: [
-        tsLoader,
+        babelLoader,
       ],
     },
     target: 'web',
   };
 
   if (target === 'test') {
-    config.module.rules = [coverageLoader, ...config.module.rules];
+    babelLoader.use.options.plugins.push('istanbul');
   }
 
   return config;

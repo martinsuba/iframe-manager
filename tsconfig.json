@@ -5,9 +5,15 @@
       "es2015",
       "dom"
     ],
-    "types": ["mocha", "chai"],
+    "types": [
+      "mocha",
+      "chai"
+    ],
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "isolatedModules": true,
   },
   "include": [
     "source/*"
