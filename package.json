@@ -6,9 +6,10 @@
   "scripts": {
     "test": "karma start karma.config.js",
     "build": "npm run clean && webpack --config ./build/webpack.config.js --mode=development",
-    "build:production": "npm run clean && webpack --config ./build/webpack.config.js --mode=production",
+    "build:production": "npm run clean && webpack --config ./build/webpack.config.js --mode=production && npm run declaration",
     "lint": "eslint --ignore-path .eslintignore . --ext .js,.tsx,.ts",
-    "clean": "del-cli dist"
+    "clean": "del-cli dist",
+    "declaration": "tsc -m umd --outFile ./dist/index.js ./source/iframe-manager.ts --declaration --emitDeclarationOnly"
   },
   "author": "Martin Suba",
   "license": "ISC",
