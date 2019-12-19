@@ -1,3 +1,5 @@
+[![](https://badgen.net/bundlephobia/minzip/iframe-manager)](https://bundlephobia.com/result?p=iframe-manager@1.0.0)
+
 # Iframe Manager
 
 Iframe Manager is simple tool which allows you to create, inject, destroy and style iframes in the DOM. It's written in TypeScript and it works as npm package.
