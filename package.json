@@ -1,6 +1,6 @@
 {
   "name": "iframe-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper tool for creating and managing iframes within the DOM.",
   "main": "./dist/index.js",
   "scripts": {
