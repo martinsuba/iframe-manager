@@ -17,9 +17,13 @@ module.exports = (config) => {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
         flags: [
+          '--disable-web-security',
           '--no-sandbox',
-          '--proxy-bypass-list=*',
-          '--proxy-server=\'http://<my org proxy server>:8080\'',
+          '--disable-setuid-sandbox',
+          '--disable-dev-shm-usage',
+          '--remote-debugging-port=9223',
+          '--headless',
+          '--disable-gpu',
         ],
       },
     },
