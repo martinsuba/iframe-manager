@@ -2,7 +2,7 @@
   "name": "iframe-manager",
   "version": "1.0.0",
   "description": "Helper tool for creating and managing iframes within the DOM.",
-  "main": "./dist/index.js",
+  "browser": "./dist/index.js",
   "scripts": {
     "test": "karma start karma.config.js",
     "build": "npm run clean && webpack --config ./build/webpack.config.js --mode=development",
@@ -11,8 +11,25 @@
     "clean": "del-cli dist",
     "declaration": "tsc -m umd --outFile ./dist/index.js ./source/iframe-manager.ts --declaration --emitDeclarationOnly"
   },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "iframe",
+    "iframes",
+    "manager",
+    "injector",
+    "inject",
+    "destroy",
+    "style",
+    "web"
+  ],
   "author": "Martin Suba",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinsuba/iframe-manager.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
