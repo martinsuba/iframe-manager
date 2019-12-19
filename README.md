@@ -1,3 +1,4 @@
+[![](https://badgen.net/npm/v/iframe-manager)](https://www.npmjs.com/package/iframe-manager)
 [![](https://badgen.net/bundlephobia/minzip/iframe-manager)](https://bundlephobia.com/result?p=iframe-manager@1.0.0)
 
 # Iframe Manager
