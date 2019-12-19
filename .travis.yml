@@ -4,7 +4,11 @@ node_js:
 os: osx
 addons:
   chrome: beta
+env:
+  - CODECOV_TOKEN="50b05140-c977-496c-a172-d2a53582159a"
 script:
   - npm run lint
   - npm run test
   - npm run build
+after_success:
+  - codecov

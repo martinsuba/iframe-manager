@@ -33,7 +33,7 @@ module.exports = (config) => {
     },
 
     coverageIstanbulReporter: {
-      reports: ['html', 'text'],
+      reports: ['html', 'text', 'lcovonly'],
       dir: 'coverage',
     },
 
