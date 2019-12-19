@@ -4,7 +4,7 @@ Iframe Manager is simple tool which allows you to create, inject, destroy and st
 
 ## Install
 ```
-npm install https://github.com/martinsuba/iframe-manager.git
+npm i -S iframe-manager
 ```
 
 ## Usage
