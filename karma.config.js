@@ -3,6 +3,7 @@ const webpackConfig = require('./build/webpack.config');
 const testFiles = 'source/**/__tests__/*.test.ts';
 
 // process.env.CHROME_BIN = require('puppeteer').executablePath();
+console.log(process.env.TRAVIS);
 
 module.exports = (config) => {
   config.set({

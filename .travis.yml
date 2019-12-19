@@ -1,14 +1,10 @@
 language: node_js
 node_js:
   - "10"
-os: osx
+# os: osx
 before_install:
   - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-install:
-  - npm install
 script:
-  - npm list --depth 0
   - npm run lint
   - npm run test
   - npm run build
