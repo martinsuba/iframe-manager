@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "10"
 os: osx
-before_install:
+before_script:
    export CHROME_BIN=/usr/bin/google-chrome
 script:
   - npm run lint

@@ -2,6 +2,8 @@ const webpackConfig = require('./build/webpack.config');
 
 const testFiles = 'source/**/__tests__/*.test.ts';
 
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
 module.exports = (config) => {
   config.set({
     singleRun: true,
