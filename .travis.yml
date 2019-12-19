@@ -1,9 +1,9 @@
 language: node_js
 node_js:
   - "10"
-# os: osx
-before_install:
-  - export CHROME_BIN=chromium-browser
+os: osx
+addons:
+  chrome: beta
 script:
   - npm run lint
   - npm run test
