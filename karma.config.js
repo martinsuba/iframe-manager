@@ -16,7 +16,11 @@ module.exports = (config) => {
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
-        flags: ['--no-sandbox'],
+        flags: [
+          '--no-sandbox',
+          '--proxy-bypass-list=*',
+          '--proxy-server=\'http://<my org proxy server>:8080\'',
+        ],
       },
     },
 
