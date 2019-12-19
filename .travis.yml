@@ -2,5 +2,9 @@ language: node_js
 node_js:
   - "10"
 os: osx
-before_script:
-  - export CHROME_BIN=/usr/bin/google-chrome
+before_install:
+  - export CHROME_BIN=chromium-browser
+script:
+  - npm run lint
+  - npm run test
+  - npm run build
