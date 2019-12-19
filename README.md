@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/martinsuba/iframe-manager.svg?branch=master)](https://travis-ci.org/martinsuba/iframe-manager)
+[![codecov](https://codecov.io/gh/martinsuba/iframe-manager/branch/master/graph/badge.svg)](https://codecov.io/gh/martinsuba/iframe-manager)
 [![](https://badgen.net/npm/v/iframe-manager)](https://www.npmjs.com/package/iframe-manager)
 [![](https://badgen.net/bundlephobia/minzip/iframe-manager)](https://bundlephobia.com/result?p=iframe-manager@1.0.0)
 
