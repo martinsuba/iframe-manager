@@ -5,6 +5,7 @@ os: osx
 before_script:
    export CHROME_BIN=/usr/bin/google-chrome
 script:
+  - npm list --depth 0
   - npm run lint
   - npm run test
   - npm run build
