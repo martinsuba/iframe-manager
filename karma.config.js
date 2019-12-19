@@ -17,7 +17,7 @@ module.exports = (config) => {
     // `--no-sandbox` is required by jenkins
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
+        base: process.env.TRAVIS ? 'Chrome' : 'ChromeHeadless',
         flags: [
           '--no-sandbox',
         ],
