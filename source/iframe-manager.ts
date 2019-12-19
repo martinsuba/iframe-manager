@@ -1,4 +1,4 @@
-import Iframe from './iframe';
+import Iframe from './Iframe';
 import { parseStyle, camelToKebab } from './helpers';
 
 interface Settings {

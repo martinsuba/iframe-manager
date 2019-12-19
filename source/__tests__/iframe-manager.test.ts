@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
 import IframeManager from '../iframe-manager';
-import Iframe from '../iframe';
+import Iframe from '../Iframe';
 
 describe('IframeManager', () => {
   it('should create an instance of IframeManager', () => {

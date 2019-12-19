@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 
-import Iframe from '../iframe';
+import Iframe from '../Iframe';
 
 let deleteSpy: sinon.SinonSpy;
 let iframe: Iframe;
