@@ -19,11 +19,10 @@ export default class IframeManager {
     const iframe = document.createElement('iframe');
     iframe.setAttribute('src', source);
     iframe.setAttribute('style', parseStyle(style));
-    for (const attr in attributes) {
-      if ({}.hasOwnProperty.call(attributes, attr)) {
-        iframe.setAttribute(camelToKebab(attr), attributes[attr]);
-      }
+    for (const [key, value] of Object.entries(attributes)) {
+      iframe.setAttribute(camelToKebab(key), value);
     }
+
     return iframe;
   }
 

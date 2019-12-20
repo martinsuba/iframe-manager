@@ -20,6 +20,7 @@ describe('IframeManager', () => {
       },
       attributes: {
         class: 'someClass',
+        name: 'someName',
       },
       target: 'body',
     };
@@ -29,6 +30,7 @@ describe('IframeManager', () => {
 
     expect(document.body.contains(injectedElement)).to.be.true;
     expect(injectedElement.getAttribute('class')).to.be.equal(settings.attributes.class);
+    expect(injectedElement.getAttribute('name')).to.be.equal(settings.attributes.name);
     expect(injectedElement.getAttribute('src')).to.be.equal(settings.source);
     expect(injectedElement.style.background).to.be.equal(settings.style.background);
     expect(injectedElement.style.position).to.be.equal(settings.style.position);
