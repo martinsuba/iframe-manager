@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - "10"
-# os: osx
 addons:
   chrome: beta
 script:
