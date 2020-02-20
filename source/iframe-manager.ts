@@ -3,8 +3,8 @@ import { parseStyle, camelToKebab } from './helpers';
 
 interface Settings {
   source: string;
-  style?: object;
-  attributes?: object;
+  style?: Record<string, string>;
+  attributes?: Record<string, string>;
   target?: string;
 }
 
@@ -15,7 +15,15 @@ export default class IframeManager {
     this.iframes = new Set();
   }
 
-  private createElement({ source, style, attributes = {} }: { source: string, style?: object, attributes?: object }): HTMLElement {
+  private createElement({
+    source,
+    style,
+    attributes = {},
+  }: {
+    source: string;
+    style?: Record<string, string>;
+    attributes?: Record<string, string>;
+  }): HTMLElement {
     const iframe = document.createElement('iframe');
     iframe.setAttribute('src', source);
     iframe.setAttribute('style', parseStyle(style));

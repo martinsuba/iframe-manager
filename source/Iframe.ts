@@ -9,7 +9,7 @@ export default class Iframe {
     this.deleteFromList = deleteFromList;
   }
 
-  style(style: object): void {
+  style(style: Record<string, string>): void {
     if (!style || typeof style !== 'object' || Array.isArray(style)) {
       throw new Error(`Style is expected to be an object, but got ${typeof style}`);
     }
